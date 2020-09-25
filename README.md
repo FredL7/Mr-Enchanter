@@ -5,6 +5,8 @@ Mr. Enchanter is a rogue-like deck building game where you manage your resources
 
 I made Mr. Enchanter during a two week break between school semeters as a challenge to complete a functional prototype in that time period. I did not work full-time on it but probably took around 40 to 50 hours to complete. I paid particular attention to applying the knowledge I learned as part of my Software engineering bachelor's degree, especially concerning programming patterns. The game features poor visual aesthetics since it was not my goal to create a pretty game. It is after all a prototype and functionnality was my primary focus.
 
+**Disclaimer** This game, altough playtested a few times, has not been thoroughly debugged. Additionally, it was made with a screen resolution of 1920x1080 in mind and smaller screens may have trouble seeing all the game's content.
+
 ## Notable architecture features
 ### MVC Pattern
 I strongly followed the idea behind the MVC pattern by splitting my scripts into three categories, models, views and controllers. Controllers include keyboard and mouse events using Unity's EventSystem, and Unity buttons. Views control what how elements are seen on the screen and what information is display. That information comes from the various models.
