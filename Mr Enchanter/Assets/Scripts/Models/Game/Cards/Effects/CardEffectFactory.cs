@@ -1,0 +1,51 @@
+﻿public class CardEffectFactory {
+  public static CardEffect nilEffect = new NilEffect(),
+                           manaEffect_Add1 = new ChangeManaEffect(1),
+                           // manaEffect_Remove1 = new ChangeManaEffect(-1),
+                           apprenticesEffect_Add1 = new ChangeResourceEffect(EResources.APPRENTICES, 1),
+                           apprenticesEffect_Add2 = new ChangeResourceEffect(EResources.APPRENTICES, 2),
+                           apprenticesEffect_Add5 = new ChangeResourceEffect(EResources.APPRENTICES, 5),
+                           apprenticesEffect_Remove1 = new ChangeResourceEffect(EResources.APPRENTICES, -1),
+                           apprenticesEffect_Remove3 = new ChangeResourceEffect(EResources.APPRENTICES, -3),
+                           apprenticesEffect_Remove4 = new ChangeResourceEffect(EResources.APPRENTICES, -4),
+                           apprenticesEffect_Remove5 = new ChangeResourceEffect(EResources.APPRENTICES, -5),
+                           foodEffect_Add1 = new ChangeResourceEffect(EResources.FOOD, 1),
+                           foodEffect_Add3 = new ChangeResourceEffect(EResources.FOOD, 3),
+                           foodEffect_Add4 = new ChangeResourceEffect(EResources.FOOD, 4),
+                           foodEffect_Add5 = new ChangeResourceEffect(EResources.FOOD, 5),
+                           goldEffect_Add10 = new ChangeResourceEffect(EResources.GOLD, 10),
+                           goldEffect_Add20 = new ChangeResourceEffect(EResources.GOLD, 20),
+                           goldEffect_Add25 = new ChangeResourceEffect(EResources.GOLD, 25),
+                           goldEffect_Add30 = new ChangeResourceEffect(EResources.GOLD, 30),
+                           goldEffect_Add35 = new ChangeResourceEffect(EResources.GOLD, 35),
+                           goldEffect_Add100 = new ChangeResourceEffect(EResources.GOLD, 100),
+                           goldEffect_Remove10 = new ChangeResourceEffect(EResources.GOLD, -10),
+                           goldEffect_Remove20 = new ChangeResourceEffect(EResources.GOLD, -20),
+                           goldEffect_Remove25 = new ChangeResourceEffect(EResources.GOLD, -25),
+                           goldEffect_Remove40 = new ChangeResourceEffect(EResources.GOLD, -40),
+                           goldEffect_Remove45 = new ChangeResourceEffect(EResources.GOLD, -45),
+                           goldEffect_Remove50 = new ChangeResourceEffect(EResources.GOLD, -50),
+                           goldEffect_Remove65 = new ChangeResourceEffect(EResources.GOLD, -65),
+                           powerEffect_Add1 = new ChangeResourceEffect(EResources.POWER, 1),
+                           powerEffect_Add2 = new ChangeResourceEffect(EResources.POWER, 2),
+
+                           renownEffect_RedAdd1 = new ChangeRenownEffect(Factions.RED, 1),
+                           renownEffect_BlueAdd1 = new ChangeRenownEffect(Factions.BLUE, 1),
+                           renownEffect_GreenAdd1 = new ChangeRenownEffect(Factions.GREEN, 1),
+                           renownEffect_YellowAdd1 = new ChangeRenownEffect(Factions.YELLOW, 1),
+
+                           cardEffect_Draw2 = new DrawCardEffect(2),
+                           cardEffect_LookAtTop3Draw1 = new SelectCardToDrawEffect(3, 1),
+                           cardEffect_SendToOblivion = new SelectCardToOblivionEffect(),
+
+                           selectNewCard = new SelectNewCardEffect(),
+
+                           cardToVariant_Overtime = new CardToVariantEffect(CardDataFactory.Work, CardDataFactory.Work_Overtime),
+                           cardToVariant_MissingIngredients = new CardToVariantEffect(CardDataFactory.Work, CardDataFactory.Work_MissingIngredients),
+                           cardToVariant_Drought = new CardToVariantEffect(CardDataFactory.Shopping, CardDataFactory.Shopping_Drought),
+                           cardToVariant_StarsMisaligned = new CardToVariantEffect(CardDataFactory.Ritual, CardDataFactory.Ritual_StarMisaligned), //Ritual dependant on selectNewCard, card to variant must be declared after
+
+                           addCard_Speech = new AddCardInLibraryEffect(CardDataFactory.Speech),
+                           addCard_PublicEvent = new AddCardInLibraryEffect(CardDataFactory.PublicEvent),
+                           addCard_SurgeOfPower = new AddCardInLibraryEffect(CardDataFactory.SurgeOfPower);
+}
